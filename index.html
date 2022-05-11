@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pokemon Battle Roulette</title>
+
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  
+  <link href="normalize.css" rel="stylesheet" type="text/css" />
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <header>
+    <img src='assets/pokemon.png' id='title'>
+    <h1>Battle Roulette!</h1>
+    <h2 id='description'>Receive a pokemon at random & battle Pokemon Trainer Ash with it to become Champion.</h2>
+  </header>
+  
+  <form action="" id='pokeSearch'>
+    <label for="pName" id='searchLabel'>Search PokeDatabase:</label>
+    <input type="text" id="pName" name="pName">
+    <input type="button" value="Search" id='searchButton'>
+  </form>
+
+
+  <section class='buttonContainer'>
+    <button href='' id='generate'>Generate Random</button>
+  </section> 
+  <section class='buttonContainer'>
+    <button href='' id='battle'>Battle!</button>
+  </section> 
+  
+  <section>
+    <h2 id='championDec' class='result'></h2>
+  </section>
+  
+  <section class='imgContainer clearfix'>
+    <section id='userPokeContainer' class='arenaSection'>
+      <img src='assets/trainer.png' id='userPokemon' class='trainer' alt='User Pokemon Image'>
+      <h3 id='userPokeName' class='contender'></h3>
+      <section class='statContainer'>
+        <h4 id='userHeight' class='stats'></h4>
+        <h4 id='userWeight' class='stats'></h4>
+        <h4 id='userType' class='stats'></h4>
+        <h4 id='userPower' class='hidden'></h4> 
+      </section>
+    </section>
+    
+    <section id='versusContainer' class='arenaSection'>
+      <h2 id='versus'>VS</h2>
+      
+      <section>
+        <h2 id='result' class='result'></h2>
+      </section>
+      
+      <span id='scoreTitle'>Number of Wins</span>
+      <h3 id='winCount' class='scoreBoard'></h3>
+      <span id='scoreTitle'>Number of Losses</span>
+      <h3 id='lossCount' class='scoreBoard'></h3>
+    </section>
+    
+    <section id='botPokeContainer' class='arenaSection'>
+      <img src='assets/ash2.png' id='botPokemon' class='trainer' alt='Bot Pokemon Image'>
+      <h3 id='botPokeName' class='contender'></h3>
+      <section class='statContainer'>
+        <h4 id='botHeight' class='stats'></h4>
+        <h4 id='botWeight' class='stats'></h4>
+        <h4 id='botType' class='stats'></h4>
+        <h4 id='botPower' class='hidden'></h4>
+      </section>
+    </section>
+  </section>  
+  
+  <script src="script2.js"></script>
+</body>
+
+</html>

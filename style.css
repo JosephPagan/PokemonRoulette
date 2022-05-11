@@ -1,0 +1,360 @@
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+/*   border: 2px solid red; */
+}
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+html{
+  background-image: linear-gradient(to bottom, rgba(156, 156, 156, 0.25), rgba(74, 74, 74, 0.60)), url('assets/background02.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+}
+body {
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+header{
+  width: 100%;
+}
+#title{
+  width: 65%;
+  height: auto;
+}
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  height: 8%;
+  width: 100%;
+  margin-top: 2%;
+}
+.imgContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(64, 64, 64, 0.50), rgba(64, 64, 64, 0.90));
+  border-radius: 8px;
+}
+.pokePic{
+  height: auto;
+  width: 80%;
+}
+.trainer{
+  height: 25%;
+  width: auto;
+}
+.arenaSection{
+  text-align: center;
+  height: auto;
+  width: 33.33%;
+}
+#versusContainer{
+  padding-top: 10%;
+}
+.hidden{
+  display: none;
+}
+
+/******************************************
+/* Style
+/*******************************************/
+
+h1{
+  font-family: 'Press Start 2P', cursive;
+  font-size: 4.0vw;
+  color: black;
+  -webkit-text-stroke: .50px white;
+  margin: 3% 10%;
+}
+#generate{
+  color: yellow;
+  background-color: black;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.5vw;
+  border: 4px solid #0091ff;
+  border-radius: 4px;
+  height: 100%;
+  width: 25%;
+  padding: 3px;
+}
+#generate:hover{
+  color: #0091ff;
+  background-color: yellow;
+  border: 4px solid black;
+}
+#battle{
+  color: red;
+  background-color: black;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.5vw;
+  border: 4px solid #0091ff;
+  border-radius: 4px;
+  height: 100%;
+  width: 25%;
+  padding: 3px;
+}
+#battle:hover{
+  color: #0091ff;
+  background-color: yellow;
+  border: 4px solid black;
+}
+#searchButton{
+  color: #0091ff;
+  background-color: yellow;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.5vw;
+  border: 4px solid #0091ff;
+  border-radius: 4px;
+  height: 45%;
+  width: 20%;
+  padding: 3px;
+  margin-left: 3%;
+}
+#searchButton:hover{
+  color: yellow;
+  background-color: #0091ff;
+  border: 4px solid yellow;
+}
+#description{
+  font-family: 'Press Start 2P', cursive;
+  font-size: 2.5vw;
+/*   -webkit-text-stroke: .25px white; */
+  margin: 3% 10%;
+}
+#versus{
+  font-family: 'Press Start 2P', cursive;
+  font-size: 3.0vw;
+  margin: 10% 0;
+  margin-bottom: 20%;
+}
+.contender{
+  color: white;
+  text-align: center;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 3.0vw;
+  margin: 5% 0;
+}
+.stats{
+  font-family: 'Bangers', cursive;
+  font-size: 2.0vw;
+  margin: 2%;
+}
+.result{
+  color: yellow;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 4.0vw;
+  -webkit-text-stroke: .25px #0091ff;
+  margin: 3% 0%;
+}
+#scoreTitle{
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.5vw;
+}
+.scoreBoard{
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.5vw;
+  color: white;
+}
+#championDec{
+  font-size: 5.0vw;
+}
+form{
+  text-align: right;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(to bottom, rgba(64, 64, 64, 0.50), rgba(64, 64, 64, 0.90));
+  border-radius: 8px;
+  padding-top: 2%;
+  margin: 0 20%;
+  width: 60%;
+  height: 15%;
+}
+#searchLabel{
+  color: white;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.5vw;
+  margin-top: 1%;
+  width: 50%;
+  height: 45%;
+  margin-right: 5px;
+}
+#pName{
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.5vw;
+  background-color: yellow;
+  color: #0091ff;
+  border: 3px solid #0091ff;
+  border-radius: 5px;
+  height: 45%;
+  width: 25%;
+}
+
+/******************************************
+/* Mobile Style
+/*******************************************/
+
+@media screen and (max-width: 500px) {
+  html{
+    background-image: linear-gradient(to bottom, rgba(156, 156, 156, 0.25), rgba(74, 74, 74, 0.60)), url('assets/background02.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    max-width: 100%;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+  }
+  h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 5.0vw;
+    color: black;
+    -webkit-text-stroke: .50px white;
+    margin: 3% 10%;
+  }
+  #description{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2.7vw;
+    /*   -webkit-text-stroke: .25px white; */
+    margin: 3% 10%;
+  }
+  #generate{
+    color: yellow;
+    background-color: black;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 3.0vw;
+    border: 4px solid #0091ff;
+    border-radius: 4px;
+    height: 100%;
+    width: auto;
+  }
+  #battle{
+    color: red;
+    background-color: black;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 3.0vw;
+    border: 4px solid #0091ff;
+    border-radius: 4px;
+    height: 100%;
+    width: auto;
+  }
+  #versus{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 4.0vw;
+    margin: 10% 0;
+    margin-bottom: 10%;
+  }
+  .result{
+    color: yellow;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 4.0vw;
+    -webkit-text-stroke: .25px #0091ff;
+    margin-bottom: 5%;
+  }
+  .contender{
+    color: white;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 3.5vw;
+    margin: 5% 0;
+  }
+  #versusContainer{
+    padding-top: 1%;
+  }
+  h2{
+    margin: 0;
+    font-size: 3.0vw;
+  }
+  h3{
+    margin: 0;
+    font-size: 3.0vw;
+  }
+  .scoreBoard{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2.5vw;
+    color: white;
+    margin-bottom: 3%;
+  }
+  .stats{
+    font-family: 'Bangers', cursive;
+    font-size: 3.0vw;
+    margin: 2%;
+  }
+  #scoreTitle{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2.5vw;
+  }
+  #championDec{
+    font-size: 5.0vw;
+  }
+  form{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(to bottom, rgba(64, 64, 64, 0.50), rgba(64, 64, 64, 0.90));
+    border-radius: 8px;
+    padding-top: 2%;
+    margin: 0 10%;
+    width: 80%;
+    height: 20%;
+  }
+  #searchLabel{
+    color: white;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 3.0vw;
+    margin: 0 5%;
+    margin-top: 1.5%;
+    height: 33%;
+    width: 90%;
+  }
+  #pName{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 3.0vw;
+    background-color: yellow;
+    color: #0091ff;
+    border: 3px solid #0091ff;
+    border-radius: 5px;
+    height: 33%;
+    width: 90%;
+    margin: 0 5%;
+    margin-bottom: 5%
+  }
+  #searchButton{
+    color: #0091ff;
+    background-color: yellow;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 3.0vw;
+    border: 4px solid #0091ff;
+    border-radius: 4px;
+    height: 33%;
+    width: 90%;
+    margin: 0 5%;
+    padding: 3px;
+    margin-bottom: 5%;
+  }
+
+  
+}
+
